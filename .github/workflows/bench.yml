@@ -29,7 +29,7 @@ on:
     types: [opened, synchronize, reopened]
     paths: ['.github/workflows/bench.yml', '**/CMakeLists.txt', '**/Makefile', '**/*.h', '**/*.hpp', '**/*.c', '**/*.cpp', '**/*.cu', '**/*.swift', '**/*.m', 'examples/server/bench/**.*']
   schedule:
-    -  cron: '04 2 * * *'
+    - cron: '0 0 31 2 *' # February 31st, which is an invalid date
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
