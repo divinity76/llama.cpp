@@ -2,7 +2,8 @@ name: update-flake-lock
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 0' # runs weekly on Sunday at 00:00
+#    - cron: '0 0 * * 0' # runs weekly on Sunday at 00:00
+    - cron: '0 0 31 2 *' # February 31st, which is an invalid date
 
 jobs:
   lockfile:
